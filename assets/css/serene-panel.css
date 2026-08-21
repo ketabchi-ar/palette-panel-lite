@@ -1,0 +1,164 @@
+/**
+ * Palette Panel - Serene Professional Design System Styles
+ * Author: Palette Digital Agency (https://palette.agency/)
+ */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
+
+/* Fallback high-speed @font-face for Material Symbols in Iran */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url('https://cdn.jsdelivr.net/npm/material-symbols@0.14.3/material-symbols-outlined.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --serene-primary: #4c5e8b;
+  --serene-primary-dim: #40527f;
+  --serene-primary-container: #b6c8fc;
+  --serene-on-primary: #f9f8ff;
+  --serene-on-primary-container: #2e416c;
+  --serene-secondary: #585f72;
+  --serene-secondary-container: #dbe2f9;
+  --serene-tertiary: #6b5680;
+  --serene-tertiary-container: #e7cdfe;
+  --serene-on-tertiary-container: #56426a;
+  --serene-surface: #f9f9fe;
+  --serene-surface-container: #ecedf6;
+  --serene-surface-container-low: #f2f3fb;
+  --serene-surface-container-high: #e6e8f1;
+  --serene-surface-container-lowest: #ffffff;
+  --serene-on-surface: #2f323b;
+  --serene-on-surface-variant: #5b5f68;
+  --serene-outline: #777b84;
+  --serene-outline-variant: #dfe2ed;
+  --serene-error: #a83836;
+  --serene-error-container: #fa746f;
+}
+
+/* Standalone theme variables and core container */
+.serene-app, body.serene-body {
+  font-family: 'Vazirmatn', Tahoma, sans-serif !important;
+  direction: rtl !important;
+  text-align: right !important;
+  color: var(--serene-on-surface);
+  background-color: var(--serene-surface);
+  box-sizing: border-box;
+}
+
+.serene-app * {
+  box-sizing: border-box;
+}
+
+.serene-app *:not(.material-symbols-outlined):not([class*="material-symbols"]) {
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+/* CRITICAL: Force Material Symbols Font & Ligatures */
+.material-symbols-outlined,
+.serene-app .material-symbols-outlined,
+.serene-app span.material-symbols-outlined,
+.serene-app i.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr !important;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Explicit color utility classes */
+.bg-primary { background-color: var(--serene-primary) !important; }
+.bg-primary-dim { background-color: var(--serene-primary-dim) !important; }
+.bg-primary-container { background-color: var(--serene-primary-container) !important; }
+.bg-secondary { background-color: var(--serene-secondary) !important; }
+.bg-secondary-container { background-color: var(--serene-secondary-container) !important; }
+.bg-tertiary { background-color: var(--serene-tertiary) !important; }
+.bg-tertiary-container { background-color: var(--serene-tertiary-container) !important; }
+.bg-surface { background-color: var(--serene-surface) !important; }
+.bg-surface-container { background-color: var(--serene-surface-container) !important; }
+.bg-surface-container-low { background-color: var(--serene-surface-container-low) !important; }
+.bg-surface-container-high { background-color: var(--serene-surface-container-high) !important; }
+.bg-surface-container-lowest { background-color: var(--serene-surface-container-lowest) !important; }
+.bg-error { background-color: var(--serene-error) !important; }
+.bg-error-container { background-color: var(--serene-error-container) !important; }
+
+.text-primary { color: var(--serene-primary) !important; }
+.text-on-primary { color: var(--serene-on-primary) !important; }
+.text-on-primary-container { color: var(--serene-on-primary-container) !important; }
+.text-secondary { color: var(--serene-secondary) !important; }
+.text-tertiary { color: var(--serene-tertiary) !important; }
+.text-on-tertiary-container { color: var(--serene-on-tertiary-container) !important; }
+.text-on-surface { color: var(--serene-on-surface) !important; }
+.text-on-surface-variant { color: var(--serene-on-surface-variant) !important; }
+.text-error { color: var(--serene-error) !important; }
+
+.border-primary { border-color: var(--serene-primary) !important; }
+.border-outline-variant { border-color: var(--serene-outline-variant) !important; }
+.border-outline { border-color: var(--serene-outline) !important; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #dfe2ed;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aeb2bc;
+}
+
+/* Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.login-card {
+  box-shadow: 0 10px 40px -10px rgba(76, 94, 139, 0.12) !important;
+  background-color: #ffffff !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Number inputs without spinners */
+.otp-input::-webkit-outer-spin-button,
+.otp-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Wheel styling */
+#luckyWheelCanvas {
+  max-width: 100%;
+  height: auto;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(76, 94, 139, 0.15);
+}
